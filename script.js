@@ -1,3 +1,15 @@
+/* Paste this at the very top of script.js */
+const startBtn = document.getElementById('startBtn');
+const overlay = document.getElementById('overlay');
+const song = document.getElementById('birthdaySong');
+
+startBtn.addEventListener('click', () => {
+    // This starts the .mp3 file
+    song.play().catch(e => console.error("Playback failed", e));
+    
+    // This hides the black screen and button
+    overlay.style.display = 'none';
+});
 // helper functions
 const PI2 = Math.PI * 2
 const random = (min, max) => Math.random() * (max - min + 1) + min | 0
